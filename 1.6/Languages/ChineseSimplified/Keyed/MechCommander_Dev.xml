@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<LanguageData>
+  <MechCommander.Dev.AssignFriendlyMechs>DEV：分配友方机械体</MechCommander.Dev.AssignFriendlyMechs>
+  <MechCommander.Dev.AssignOption>分配：{0}</MechCommander.Dev.AssignOption>
+  <MechCommander.Dev.SyncJusticeSkills>DEV：同步「正义」技能</MechCommander.Dev.SyncJusticeSkills>
+</LanguageData>

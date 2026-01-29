@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+  <MAP_WorkMode_EfficientExecution.label>work (efficient execution)</MAP_WorkMode_EfficientExecution.label>
+  <MAP_WorkMode_MobileCombat.label>work (mobile combat)</MAP_WorkMode_MobileCombat.label>
+  <MAP_WorkMode_MobileCombat_Guard.label>escort (mobile combat)</MAP_WorkMode_MobileCombat_Guard.label>
+  <MAP_WorkMode_FortifiedDefense.label>work (fortified defense)</MAP_WorkMode_FortifiedDefense.label>
+</LanguageData>

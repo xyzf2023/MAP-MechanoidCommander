@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+  <MAP_WorkMode_EfficientExecution.label>工作（高效执行）</MAP_WorkMode_EfficientExecution.label>
+  <MAP_WorkMode_MobileCombat.label>工作（机动作战）</MAP_WorkMode_MobileCombat.label>
+  <MAP_WorkMode_MobileCombat_Guard.label>守卫（机动作战）</MAP_WorkMode_MobileCombat_Guard.label>
+  <MAP_WorkMode_FortifiedDefense.label>工作（阵地防御）</MAP_WorkMode_FortifiedDefense.label>
+</LanguageData>

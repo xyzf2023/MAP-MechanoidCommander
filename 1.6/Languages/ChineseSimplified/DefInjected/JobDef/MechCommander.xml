@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+  <MAP_UseChipForBandwidth.label>提升带宽</MAP_UseChipForBandwidth.label>
+  <MAP_UseChipForBandwidth.reportString>提升带宽</MAP_UseChipForBandwidth.reportString>
+  <MAP_UseBandwidthLink.label>安装带宽协调模块</MAP_UseBandwidthLink.label>
+  <MAP_UseBandwidthLink.reportString>安装带宽协调模块</MAP_UseBandwidthLink.reportString>
+</LanguageData>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<LanguageData>
+  <MechCommander.Menu.IncreaseBandwidth.UseOne>Increase bandwidth: use one {0}</MechCommander.Menu.IncreaseBandwidth.UseOne>
+  <MechCommander.Menu.IncreaseBandwidth.UseAll>Increase bandwidth: use all {0}</MechCommander.Menu.IncreaseBandwidth.UseAll>
+  <MechCommander.Menu.IncreaseBandwidth.WasteConfirm>{0}'s bandwidth cap is {2}. Using all {1} will cause waste.\n\nAre you sure you want to continue?</MechCommander.Menu.IncreaseBandwidth.WasteConfirm>
+  <MechCommander.Menu.RepairMech>Repair mechanoid: {0}</MechCommander.Menu.RepairMech>
+  <MechCommander.Menu.BandwidthLink.Use>Install bandwidth coordination module</MechCommander.Menu.BandwidthLink.Use>
+  <MechCommander.Menu.BandwidthLink.BlockedByMechOverseer>Overseer is a mechanoid, cannot install</MechCommander.Menu.BandwidthLink.BlockedByMechOverseer>
+</LanguageData>

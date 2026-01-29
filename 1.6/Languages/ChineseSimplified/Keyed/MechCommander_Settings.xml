@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<LanguageData>
+  <MechCommander.Settings.Category>[MAP]机械族指挥官</MechCommander.Settings.Category>
+  <MechCommander.Settings.Header>「正义」会尝试将自身已有且作用部位为“全身”的非负面状态同步到其控制的机械体。你可以在此处选择设置哪些状态不会被同步。</MechCommander.Settings.Header>
+  <MechCommander.Settings.AddJusticeToWorkTab>将「正义」加入工作标签页</MechCommander.Settings.AddJusticeToWorkTab>
+  <MechCommander.Settings.AddJusticeToWorkTabTip>启用后，「正义」会出现在工作标签页列表中。</MechCommander.Settings.AddJusticeToWorkTabTip>
+  <MechCommander.Settings.Reset>恢复默认设置</MechCommander.Settings.Reset>
+  <MechCommander.Settings.AllowedTitle>允许同步的健康状态</MechCommander.Settings.AllowedTitle>
+  <MechCommander.Settings.BlockedTitle>不允许同步的健康状态</MechCommander.Settings.BlockedTitle>
+  <MechCommander.Settings.FilterAll>全部</MechCommander.Settings.FilterAll>
+  <MechCommander.Settings.FilterUnknown>未知</MechCommander.Settings.FilterUnknown>
+  <MechCommander.Settings.ToBlacklist>→</MechCommander.Settings.ToBlacklist>
+  <MechCommander.Settings.FromBlacklist>←</MechCommander.Settings.FromBlacklist>
+</LanguageData>

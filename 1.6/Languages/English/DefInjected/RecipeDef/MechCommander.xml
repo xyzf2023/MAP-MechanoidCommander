@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+  <MAP_Gestate_Justice.label>gestate Justice</MAP_Gestate_Justice.label>
+  <MAP_Gestate_Justice.description>Gestate a Justice mechanoid.</MAP_Gestate_Justice.description>
+  <MAP_Gestate_Justice.jobString>Gestating Justice.</MAP_Gestate_Justice.jobString>
+  <MAP_Gestate_Hermit.label>gestate Hermit</MAP_Gestate_Hermit.label>
+  <MAP_Gestate_Hermit.description>Gestate a Hermit mechanoid.</MAP_Gestate_Hermit.description>
+  <MAP_Gestate_Hermit.jobString>Gestating Hermit.</MAP_Gestate_Hermit.jobString>
+  <MAP_Make_Mechlink.label>make mechlink</MAP_Make_Mechlink.label>
+  <MAP_Make_Mechlink.description>Make a mechlink.</MAP_Make_Mechlink.description>
+  <MAP_Make_Mechlink.jobString>Making mechlink.</MAP_Make_Mechlink.jobString>
+  <MAP_Make_MechBandwidthLink.label>make bandwidth coordination module</MAP_Make_MechBandwidthLink.label>
+  <MAP_Make_MechBandwidthLink.description>Modify a mechlink to transform it into a mechanoid-use module capable of processing and relaying mechanoid signals. After installation on a mechanoid, it will be able to handle part of the mechanitor's bandwidth processing functions.</MAP_Make_MechBandwidthLink.description>
+  <MAP_Make_MechBandwidthLink.jobString>Making bandwidth coordination module.</MAP_Make_MechBandwidthLink.jobString>
+</LanguageData>

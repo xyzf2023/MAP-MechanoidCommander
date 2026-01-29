@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+  <MAP_UseChipForBandwidth.label>increase bandwidth</MAP_UseChipForBandwidth.label>
+  <MAP_UseChipForBandwidth.reportString>increasing bandwidth</MAP_UseChipForBandwidth.reportString>
+  <MAP_UseBandwidthLink.label>install bandwidth coordination module</MAP_UseBandwidthLink.label>
+  <MAP_UseBandwidthLink.reportString>installing bandwidth coordination module</MAP_UseBandwidthLink.reportString>
+</LanguageData>

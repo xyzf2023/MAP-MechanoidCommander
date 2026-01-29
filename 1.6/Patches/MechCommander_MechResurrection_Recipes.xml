@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+  <Operation Class="PatchOperationAdd">
+    <xpath>/Defs/RecipeDef[defName="ResurrectHeavyMech"]/fixedIngredientFilter/thingDefs</xpath>
+    <value>
+      <li>Corpse_MAP_Mech_Justice</li>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationAdd">
+    <xpath>/Defs/RecipeDef[defName="ResurrectMediumMech"]/fixedIngredientFilter/thingDefs</xpath>
+    <value>
+      <li>Corpse_MAP_Mech_Hermit</li>
+    </value>
+  </Operation>
+</Patch>

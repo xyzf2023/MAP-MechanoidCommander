@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<LanguageData>
+  <MechCommander.Settings.Category>Mechanoid Commander</MechCommander.Settings.Category>
+  <MechCommander.Settings.Header>Justice will attempt to synchronize non-negative states it has that affect the "whole body" to its controlled mechanoids. You can select which states will not be synchronized here.</MechCommander.Settings.Header>
+  <MechCommander.Settings.Reset>Restore defaults</MechCommander.Settings.Reset>
+  <MechCommander.Settings.AllowedTitle>Allowed hediffs for synchronization</MechCommander.Settings.AllowedTitle>
+  <MechCommander.Settings.BlockedTitle>Blocked hediffs from synchronization</MechCommander.Settings.BlockedTitle>
+  <MechCommander.Settings.FilterAll>All</MechCommander.Settings.FilterAll>
+  <MechCommander.Settings.FilterUnknown>Unknown</MechCommander.Settings.FilterUnknown>
+  <MechCommander.Settings.ToBlacklist>→</MechCommander.Settings.ToBlacklist>
+  <MechCommander.Settings.FromBlacklist>←</MechCommander.Settings.FromBlacklist>
+</LanguageData>
