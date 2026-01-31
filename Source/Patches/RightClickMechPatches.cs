@@ -12,7 +12,7 @@ namespace MAP_MechCommander
     {
         private const string JusticeDefName = "MAP_Mech_Justice";
 
-        private static bool IsJustice(Pawn pawn)
+        private static bool IsJustice(Pawn? pawn)
         {
             return pawn?.def?.defName == JusticeDefName;
         }
@@ -21,44 +21,19 @@ namespace MAP_MechCommander
         [HarmonyPostfix]
         public static void Pawn_GetFloatMenuOptions_Postfix(Pawn __instance, Pawn selPawn, ref IEnumerable<FloatMenuOption> __result)
         {
-            if (!IsJustice(selPawn))
+            // 当右键自身时，移除来自 WorkGivers/Mechanitor 的修理选项（禁止自我修理）
+            if (__instance == selPawn && selPawn != null && __result != null)
             {
-                return;
+                List<FloatMenuOption> list = __result.ToList();
+                string selfLabel = __instance.LabelShort ?? "";
+                list.RemoveAll(o =>
+                {
+                    if (o?.Label == null) return false;
+                    string lab = o.Label.ToString();
+                    return lab.Contains(selfLabel) && (lab.Contains("修理") || lab.Contains("Repair"));
+                });
+                __result = list;
             }
-
-            if (__instance == selPawn || !__instance.RaceProps.IsMechanoid)
-            {
-                return;
-            }
-
-            if (!MechRepairUtility.CanRepair(__instance))
-            {
-                return;
-            }
-
-            if (__instance.TryGetComp<CompMechRepairable>() == null)
-            {
-                return;
-            }
-
-            if (!selPawn.CanReach(__instance, PathEndMode.Touch, Danger.Deadly))
-            {
-                return;
-            }
-
-            if (!selPawn.CanReserve(__instance))
-            {
-                return;
-            }
-
-            List<FloatMenuOption> options = __result?.ToList() ?? new List<FloatMenuOption>();
-            options.Add(new FloatMenuOption("MechCommander.Menu.RepairMech".Translate(__instance.LabelShort, __instance), delegate
-            {
-                Job job = JobMaker.MakeJob(JobDefOf.RepairMech, __instance);
-                selPawn.jobs.TryTakeOrderedJob(job, new JobTag?(JobTag.Misc), false);
-            }));
-
-            __result = options;
         }
 
         // 放行「正义」对物体的右键菜单（穿梭机等）

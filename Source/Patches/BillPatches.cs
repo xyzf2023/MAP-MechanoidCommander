@@ -56,12 +56,13 @@ namespace MAP_MechCommander
         {
             if (MechGestatorRecipeUtility.IsJusticeDisabledForGestation(bill.recipe, pawn))
             {
+                string reasonKey = MechGestatorRecipeUtility.GetJusticeDisabledReasonKey(bill.recipe);
                 return new Widgets.DropdownMenuElement<Pawn>
                 {
                     option = new FloatMenuOption(
                         string.Format("{0} ({1})",
                             pawn.LabelShortCap,
-                            "MechCommander.Bill.Reason.JusticeCannotGestate".Translate()),
+                            reasonKey.Translate()),
                         null),
                     payload = pawn
                 };

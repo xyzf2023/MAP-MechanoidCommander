@@ -3,7 +3,6 @@
   <MechCommander.Menu.IncreaseBandwidth.UseOne>提升带宽：使用一个{0}</MechCommander.Menu.IncreaseBandwidth.UseOne>
   <MechCommander.Menu.IncreaseBandwidth.UseAll>提升带宽：使用全部{0}</MechCommander.Menu.IncreaseBandwidth.UseAll>
   <MechCommander.Menu.IncreaseBandwidth.WasteConfirm>{0}的带宽上限为{2}，使用全部{1}会导致浪费。\n\n 您确定继续吗？</MechCommander.Menu.IncreaseBandwidth.WasteConfirm>
-  <MechCommander.Menu.RepairMech>修理机械体：{0}</MechCommander.Menu.RepairMech>
   <MechCommander.Menu.BandwidthLink.Use>安装带宽协调模块</MechCommander.Menu.BandwidthLink.Use>
   <MechCommander.Menu.BandwidthLink.BlockedByMechOverseer>监管者为机械体，无法安装</MechCommander.Menu.BandwidthLink.BlockedByMechOverseer>
 </LanguageData>

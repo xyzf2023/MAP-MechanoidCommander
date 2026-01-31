@@ -7,10 +7,14 @@ using Verse;
 
 namespace MAP_MechCommander
 {
+    /// <summary>
+    /// 放行正义/隐者零优先级时仍显示铸造相关 WorkGiver 右键选项（Transpiler）。
+    /// </summary>
     [HarmonyPatch(typeof(FloatMenuOptionProvider_WorkGivers), "GetWorkGiverOption")]
     public static class Patch_FloatMenuOptionProvider_WorkGivers_GetWorkGiverOption
     {
         private const string JusticeDefName = "MAP_Mech_Justice";
+        private const string RepairMechDefName = "RepairMech";
 
         private static bool AllowZeroPriority(Pawn pawn, WorkTypeDef workType)
         {
@@ -66,6 +70,36 @@ namespace MAP_MechCommander
                 || opcode == OpCodes.Ldloc_3
                 || opcode == OpCodes.Ldloc
                 || opcode == OpCodes.Ldloc_S;
+        }
+    }
+
+    /// <summary>
+    /// 拦截铸造相关右键：当 WorkGiver 为修理机械体且目标与选中 pawn 为同一人时，不添加修理选项（禁止自我修理）。
+    /// 原版签名：GetWorkGiverOption(Pawn pawn, WorkGiverDef workGiver, LocalTargetInfo target, FloatMenuContext context)
+    /// </summary>
+    [HarmonyPatch(typeof(FloatMenuOptionProvider_WorkGivers), "GetWorkGiverOption")]
+    public static class Patch_FloatMenuOptionProvider_WorkGivers_BlockRepairSelf
+    {
+        private const string RepairMechDefName = "RepairMech";
+
+        [HarmonyPostfix]
+        public static void Postfix(Pawn pawn, WorkGiverDef workGiver, LocalTargetInfo target, ref FloatMenuOption? __result)
+        {
+            if (__result == null || workGiver == null || pawn == null)
+            {
+                return;
+            }
+
+            if (workGiver.defName != RepairMechDefName)
+            {
+                return;
+            }
+
+            // 目标与执行者为同一 pawn 时，不显示修理选项
+            if (target.HasThing && target.Thing is Pawn targetPawn && targetPawn == pawn)
+            {
+                __result = null;
+            }
         }
     }
 }
