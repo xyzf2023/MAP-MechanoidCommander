@@ -153,6 +153,7 @@ namespace MAP_MechCommander
             {
                 pawn.workSettings = new Pawn_WorkSettings(pawn);
                 pawn.workSettings.EnableAndInitialize();
+                MechWorkSettingsUtility.RestrictToMechEnabledWorkTypes(pawn);
             }
 
             if (pawn.workSettings.EverWork && !pawn.WorkTypeIsDisabled(WorkTypeDefOf.Smithing))
@@ -161,6 +162,12 @@ namespace MAP_MechCommander
                 {
                     pawn.workSettings.SetPriority(WorkTypeDefOf.Smithing, 3);
                 }
+            }
+
+            // 每次 EnsureWorkSettings 都重新限制：PawnGenerator.GeneratePawn 会在我们 PostPostMake 之后再次调用 EnableAndInitialize()，会覆盖为“全工作开启”
+            if (pawn.workSettings != null && pawn.workSettings.EverWork)
+            {
+                MechWorkSettingsUtility.RestrictToMechEnabledWorkTypes(pawn);
             }
         }
 

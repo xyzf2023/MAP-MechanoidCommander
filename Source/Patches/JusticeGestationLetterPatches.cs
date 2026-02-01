@@ -13,7 +13,15 @@ namespace MAP_MechCommander
         public static void Postfix(ref Thing __result)
         {
             Pawn? pawn = __result as Pawn;
-            if (pawn == null || pawn.def?.defName != JusticeDefName)
+            if (pawn == null)
+            {
+                return;
+            }
+
+            // 培育完成时立即限制工作类型：PawnGenerator.GeneratePawn 会在 PostPostMake 之后再次调用 EnableAndInitialize()，导致 MechTab/WorkTab 显示全工作
+            MechWorkSettingsUtility.RestrictToMechEnabledWorkTypes(pawn);
+
+            if (pawn.def?.defName != JusticeDefName)
             {
                 return;
             }

@@ -49,10 +49,12 @@ namespace MAP_MechCommander
                 {
                     pawn.workSettings = new Pawn_WorkSettings(pawn);
                     pawn.workSettings.EnableAndInitialize();
+                    MechWorkSettingsUtility.RestrictToMechEnabledWorkTypes(pawn);
                 }
                 else if (!pawn.workSettings.Initialized)
                 {
                     pawn.workSettings.EnableAndInitialize();
+                    MechWorkSettingsUtility.RestrictToMechEnabledWorkTypes(pawn);
                 }
                 if (existing.Add(pawn))
                 {
